@@ -97,6 +97,112 @@
     <build>
         <pluginManagement>
             <plugins>
+            
+            				<!--The configuration of this plugin is used to store the Eclipse M2E 
+					settings only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-antrun-plugin</artifactId>
+										<versionRange> [1.7,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore/>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-resources-plugin</artifactId>
+										<versionRange> [2.5,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>resources</goal>
+											<goal> testResources </goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore/>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>properties-maven-plugin</artifactId>
+										<versionRange> [1.0-alpha-2,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>read-project-properties</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore/>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.cxf</groupId>
+										<artifactId>cxf-codegen-plugin</artifactId>
+										<versionRange> [2.2,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>wsdl2java</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore/>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>hibernate3-maven-plugin</artifactId>
+										<versionRange> [3.0-SNAPSHOT,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>hbm2ddl</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore/>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-ear-plugin</artifactId>
+										<versionRange> [2.6,)</versionRange>
+										<goals>
+											<!-- plugin goals -->
+											<goal>generate-application-xml</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<!-- M2E should ignore the plugin -->
+										<ignore/>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+            
                 <!-- Use the bnd-maven-plugin and assemble the symbolic names -->
                 <plugin>
                     <groupId>biz.aQute.bnd</groupId>
